@@ -229,8 +229,206 @@ def calculate_momentum_features(data: pd.DataFrame, periods=[7, 14, 21]) -> pd.D
     
     features = features.fillna(0)
     
-    # Verify we have exactly 35 features
     expected_features = len(required_features) * (1 + 2 * len(periods))  # base features + (momentum + mean_rev) * periods
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_volatility_regime_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate volatility regime features for strategy 13."""
+    features = pd.DataFrame(index=data.index)
+    
+    vol_cols = ['VIX', 'MXUS', 'MXEU', 'MXJP', 'DXY', 'XAU BGNL']
+    
+    for col in vol_cols:
+        if f"{col}_Close" not in data.columns:
+            raise ValueError(f"Required feature {col} not found in data")
+            
+        prices = data[f"{col}_Close"]
+        features[col] = prices.round(3)
+        
+        features[f'{col}_vol_regime'] = (
+            prices.rolling(21).std() / prices.rolling(63).std()
+        ).round(3)
+        
+        features[f'{col}_trend'] = (
+            prices.rolling(7).mean() / prices.rolling(21).mean()
+        ).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = len(vol_cols) * 3  # base features + vol_regime + trend
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_equities_vs_commodities_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate cross-asset correlation features for equities vs commodities (strategy 5)."""
+    features = pd.DataFrame(index=data.index)
+    
+    required_features = ['MXUS', 'XAU BGNL', 'Cl1']
+    
+    for feature in required_features:
+        if f"{feature}_Close" not in data.columns:
+            raise ValueError(f"Required feature {feature} not found in data")
+            
+        prices = data[f"{feature}_Close"]
+        features[feature] = prices.round(3)
+    
+    features['MXUS_XAU_CORR'] = (features['MXUS'] * features['XAU BGNL']).round(3)
+    features['MXUS_CL1_CORR'] = (features['MXUS'] * features['Cl1']).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = len(required_features) + 2  # base features + correlation features
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_volatility_vs_equities_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate cross-asset correlation features for volatility vs equities (strategy 7)."""
+    features = pd.DataFrame(index=data.index)
+    
+    required_features = ['MXUS', 'VIX']
+    
+    for feature in required_features:
+        if f"{feature}_Close" not in data.columns:
+            raise ValueError(f"Required feature {feature} not found in data")
+            
+        prices = data[f"{feature}_Close"]
+        features[feature] = prices.round(3)
+    
+    features['MXUS_VIX_CORR'] = (features['MXUS'] * features['VIX']).round(3)
+    features['MXUS_VIX_RATIO'] = (features['MXUS'] / features['VIX']).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = len(required_features) + 2  # base features + correlation features
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_vix_momentum_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate VIX momentum and extreme value features for strategy 17."""
+    features = pd.DataFrame(index=data.index)
+    
+    if 'VIX_Close' not in data.columns:
+        raise ValueError("Required feature VIX not found in data")
+            
+    vix = data['VIX_Close']
+    features['VIX'] = vix.round(3)
+    
+    features['VIX_7D_Change'] = vix.pct_change(7).round(3)
+    features['VIX_7D_High'] = vix.rolling(7).max().round(3)
+    features['VIX_7D_StdDev'] = vix.rolling(7).std().round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = 4  # VIX + 7D_Change + 7D_High + 7D_StdDev
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_dxy_gold_correlation_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate DXY-Gold correlation features for strategy 19."""
+    features = pd.DataFrame(index=data.index)
+    
+    required_features = ['DXY', 'XAU BGNL']
+    
+    for feature in required_features:
+        if f"{feature}_Close" not in data.columns:
+            raise ValueError(f"Required feature {feature} not found in data")
+    
+    dxy = data['DXY_Close']
+    gold = data['XAU BGNL_Close']
+    
+    features['DXY_Gold_Ratio'] = (dxy / gold).round(3)
+    features['DXY_7D_Change'] = dxy.pct_change(7).round(3)
+    features['Gold_7D_Change'] = gold.pct_change(7).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = 3  # DXY_Gold_Ratio + DXY_7D_Change + Gold_7D_Change
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_em_vs_dm_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate emerging vs developed markets features for strategy 20."""
+    features = pd.DataFrame(index=data.index)
+    
+    required_features = ['MXCN', 'MXUS']
+    
+    for feature in required_features:
+        if f"{feature}_Close" not in data.columns:
+            raise ValueError(f"Required feature {feature} not found in data")
+    
+    mxcn = data['MXCN_Close']
+    mxus = data['MXUS_Close']
+    
+    features['MXCN_MXUS_Ratio'] = (mxcn / mxus).round(3)
+    features['MXCN_7D_Change'] = mxcn.pct_change(7).round(3)
+    features['MXCN_MXUS_Ratio_7D_Change'] = features['MXCN_MXUS_Ratio'].pct_change(7).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = 3  # MXCN_MXUS_Ratio + MXCN_7D_Change + MXCN_MXUS_Ratio_7D_Change
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_oil_dxy_relationship_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate Oil-DXY relationship features for strategy 21."""
+    features = pd.DataFrame(index=data.index)
+    
+    required_features = ['Cl1', 'DXY']
+    
+    for feature in required_features:
+        if f"{feature}_Close" not in data.columns:
+            raise ValueError(f"Required feature {feature} not found in data")
+    
+    oil = data['Cl1_Close']
+    dxy = data['DXY_Close']
+    
+    features['Oil_DXY_Ratio'] = (oil / dxy).round(3)
+    features['Oil_7D_Change'] = oil.pct_change(7).round(3)
+    features['Oil_DXY_Ratio_7D_Change'] = features['Oil_DXY_Ratio'].pct_change(7).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = 3  # Oil_DXY_Ratio + Oil_7D_Change + Oil_DXY_Ratio_7D_Change
+    if len(features.columns) != expected_features:
+        raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
+    
+    return features
+
+def calculate_equity_vix_ratio_features(data: pd.DataFrame) -> pd.DataFrame:
+    """Calculate equity-VIX ratio features for strategy 25."""
+    features = pd.DataFrame(index=data.index)
+    
+    required_features = ['MXUS', 'VIX']
+    
+    for feature in required_features:
+        if f"{feature}_Close" not in data.columns:
+            raise ValueError(f"Required feature {feature} not found in data")
+    
+    mxus = data['MXUS_Close']
+    vix = data['VIX_Close']
+    
+    features['MXUS_VIX_Ratio'] = (mxus / vix).round(3)
+    features['MXUS_7D_Change'] = mxus.pct_change(7).round(3)
+    features['MXUS_VIX_Ratio_7D_Change'] = features['MXUS_VIX_Ratio'].pct_change(7).round(3)
+    
+    features = features.fillna(0)
+    
+    expected_features = 3  # MXUS_VIX_Ratio + MXUS_7D_Change + MXUS_VIX_Ratio_7D_Change
     if len(features.columns) != expected_features:
         raise ValueError(f"Generated {len(features.columns)} features, but model expects {expected_features}")
     
@@ -270,12 +468,25 @@ def main():
         #primary_data = primary_data.loc[common_dates]
         #base_data_weekly = base_data_weekly.loc[common_dates]
         
-        # For cross_asset_momentum strategy, calculate additional features
-        if args.strategy == "14":  # cross_asset_momentum
+        # Additional features for specific strategies     
+        if args.strategy == "5":  # equities_vs_commodities
+            feature_data = calculate_equities_vs_commodities_features(base_data_weekly)
+        elif args.strategy == "7":  # volatility_vs_equities
+            feature_data = calculate_volatility_vs_equities_features(base_data_weekly)
+        elif args.strategy == "13":  # volatility_regime
+            feature_data = calculate_volatility_regime_features(base_data_weekly)
+        elif args.strategy == "14":  # cross_asset_momentum
             feature_data = calculate_momentum_features(base_data_weekly)
-            #print("Cross-asset momentum features calculated:")
-            #print(feature_data.columns.tolist())
-            #print(f"Total features: {len(feature_data.columns)}")
+        elif args.strategy == "17":  # vix_momentum
+            feature_data = calculate_vix_momentum_features(base_data_weekly)
+        elif args.strategy == "19":  # dxy_gold_correlation
+            feature_data = calculate_dxy_gold_correlation_features(base_data_weekly)
+        elif args.strategy == "20":  # em_vs_dm
+            feature_data = calculate_em_vs_dm_features(base_data_weekly)
+        elif args.strategy == "21":  # oil_dxy_relationship
+            feature_data = calculate_oil_dxy_relationship_features(base_data_weekly)
+        elif args.strategy == "25":  # equity_vix_ratio
+            feature_data = calculate_equity_vix_ratio_features(base_data_weekly)
         else:
             # For other strategies, just use Close prices
             feature_data = pd.DataFrame()

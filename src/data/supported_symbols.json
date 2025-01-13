@@ -38,10 +38,6 @@
       "Cl1": {
         "symbol": "USO",
         "description": "United States Oil Fund as proxy for crude oil"
-      },
-      "CRY": {
-        "symbol": "DBC",
-        "description": "Invesco DB Commodity Index Tracking Fund"
       }
     },
     "volatility": {
