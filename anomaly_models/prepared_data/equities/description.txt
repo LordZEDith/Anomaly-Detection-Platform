@@ -1,0 +1,32 @@
+Strategy 3: Equities
+
+Purpose:
+- Monitor global equity markets
+- Detect regional market stress
+- Identify market contagion
+
+Features:
+Base Features:
+- MXUS (MSCI USA Index)
+- MXEU (MSCI Europe Index)
+- MXJP (MSCI Japan Index)
+
+Derived Features:
+- REGIONAL_RETURNS (7-day)
+- MARKET_CORRELATIONS
+- REGIONAL_VOLATILITY
+- RELATIVE_STRENGTH
+- MARKET_BREADTH
+- TREND_STRENGTH
+
+Advantages:
+- Global market coverage
+- Regional risk detection
+- Contagion monitoring
+- Liquid markets data
+
+Disadvantages:
+- Time zone effects
+- Regional policy differences
+- Market structure variations
+- Currency fluctuation impact 

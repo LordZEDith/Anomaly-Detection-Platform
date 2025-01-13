@@ -1,0 +1,33 @@
+Strategy 8: Equity Market Dispersion
+
+Purpose:
+- Analyze dispersion among global equity markets
+- Detect anomalies through market divergences
+- Capture regional market stress
+
+Features:
+Base Features:
+- MXUS (MSCI US Index)
+- MXEU (MSCI Europe Index)
+- MXJP (MSCI Japan Index)
+
+Derived Features:
+- EQUITY_MAX (Maximum return across markets)
+- EQUITY_MIN (Minimum return across markets)
+- EQUITY_DISPERSION (Max-Min spread)
+- EQUITY_STD (Standard deviation)
+- EQUITY_RANGE_RATIO (Dispersion/Mean ratio)
+- EQUITY_DISP_MA7 (7-day moving average of dispersion)
+- EQUITY_DISP_STD7 (7-day standard deviation of dispersion)
+
+Advantages:
+- Captures market divergences
+- Identifies regional stress
+- Shows market fragmentation
+- Useful for detecting contagion
+
+Disadvantages:
+- Complex feature interactions
+- Requires careful threshold setting
+- May be affected by timezone differences
+- Sensitive to regional events 

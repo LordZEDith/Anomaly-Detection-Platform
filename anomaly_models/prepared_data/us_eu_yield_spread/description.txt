@@ -1,0 +1,33 @@
+Strategy 22: US-EU Yield Spread
+
+Purpose:
+- Monitor policy divergence
+- Detect sovereign stress
+- Identify rate regime shifts
+
+Features:
+Base Features:
+- USGG10YR (US 10Y yield)
+- GTDEM10Y (German 10Y yield)
+- DXY (Dollar Index)
+- VIX (Volatility Index)
+
+Derived Features:
+- US_EU_SPREAD
+- SPREAD_7D_CHANGE
+- SPREAD_MOMENTUM
+- POLICY_DIVERGENCE_SCORE
+- SOVEREIGN_STRESS_INDEX
+- RATE_DIFFERENTIAL_REGIME
+
+Advantages:
+- Policy insight signals
+- Sovereign risk detection
+- Currency impact insights
+- Rate regime indicators
+
+Disadvantages:
+- Central bank intervention
+- Policy communication effects
+- Technical market factors
+- Term premium variations 

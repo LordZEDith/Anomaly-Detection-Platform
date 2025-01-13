@@ -1,0 +1,1042 @@
+{
+  "strategies": [
+    {
+      "id": 1,
+      "name": "All Features",
+      "folder": "all_features",
+      "purpose": [
+        "Provide comprehensive market analysis",
+        "Capture cross-asset relationships",
+        "Maximize available information for anomaly detection"
+      ],
+      "features": {
+        "base": [
+          "XAU BGNL",
+          "ECSURPUS",
+          "BDIY",
+          "CRY",
+          "DXY",
+          "JPY",
+          "GBP",
+          "Cl1",
+          "VIX",
+          "USGG30YR",
+          "GT10",
+          "USGG2YR",
+          "USGG3M",
+          "US0001M",
+          "GTDEM30Y",
+          "GTDEM10Y",
+          "GTDEM2Y",
+          "EONIA",
+          "GTITL30YR",
+          "GTITL10YR",
+          "GTITL2YR",
+          "GTJPY30YR",
+          "GTJPY10YR",
+          "GTJPY2YR",
+          "GTGBP30Y",
+          "GTGBP20Y",
+          "GTGBP2Y",
+          "LUMSTRUU",
+          "LMBITR",
+          "LUACTRUU",
+          "LF98TRUU",
+          "LG30TRUU",
+          "LP01TREU",
+          "EMUSTRUU",
+          "LF94TRUU",
+          "MXUS",
+          "MXEU",
+          "MXJP",
+          "MXBR",
+          "MXRU",
+          "MXIN",
+          "MXCN"
+        ],
+        "derived": [
+          "Cross-asset correlations",
+          "Rolling statistics",
+          "Market stress indicators",
+          "Dispersion metrics",
+          "Yield curve metrics",
+          "Volatility regime indicators"
+        ]
+      },
+      "advantages": [
+        "Maximum information utilization",
+        "Captures complex market interactions",
+        "Robust to different types of stress",
+        "Comprehensive risk coverage"
+      ],
+      "disadvantages": [
+        "High dimensionality",
+        "Complex feature interactions",
+        "Risk of overfitting",
+        "Computationally intensive"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "VIX Only",
+      "folder": "vix_only",
+      "purpose": [
+        "Monitor market fear gauge",
+        "Detect volatility spikes",
+        "Identify risk perception shifts"
+      ],
+      "features": {
+        "base": [
+          "VIX"
+        ],
+        "derived": [
+          "VIX_LEVEL",
+          "VIX_MOMENTUM",
+          "VIX_REGIME",
+          "FEAR_INDEX",
+          "VOLATILITY_TREND",
+          "MARKET_STRESS_SIGNAL"
+        ]
+      },
+      "advantages": [
+        "Simple interpretation",
+        "Quick signal generation",
+        "Well-known indicator",
+        "Liquid benchmark"
+      ],
+      "disadvantages": [
+        "Single factor limitation",
+        "US market focus",
+        "Potential false signals",
+        "Backward-looking nature"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Equities",
+      "folder": "equities",
+      "purpose": [
+        "Monitor global equity markets",
+        "Detect regional market stress",
+        "Identify market contagion"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "MXEU",
+          "MXJP"
+        ],
+        "derived": [
+          "REGIONAL_RETURNS",
+          "MARKET_CORRELATIONS",
+          "REGIONAL_VOLATILITY",
+          "RELATIVE_STRENGTH",
+          "MARKET_BREADTH",
+          "TREND_STRENGTH"
+        ]
+      },
+      "advantages": [
+        "Global market coverage",
+        "Regional risk detection",
+        "Contagion monitoring",
+        "Liquid markets data"
+      ],
+      "disadvantages": [
+        "Time zone effects",
+        "Regional policy differences",
+        "Market structure variations",
+        "Currency fluctuation impact"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Commodities",
+      "folder": "commodities",
+      "purpose": [
+        "Monitor commodity market stress",
+        "Detect safe-haven flows",
+        "Identify economic activity signals"
+      ],
+      "features": {
+        "base": [
+          "XAU BGNL",
+          "Cl1",
+          "CRY"
+        ],
+        "derived": [
+          "GOLD_MOMENTUM",
+          "OIL_MOMENTUM",
+          "CRB_MOMENTUM",
+          "COMMODITY_VOLATILITY",
+          "SAFE_HAVEN_RATIO",
+          "COMMODITY_TREND_STRENGTH"
+        ]
+      },
+      "advantages": [
+        "Captures flight to safety",
+        "Reflects global demand",
+        "Indicates geopolitical risk",
+        "Early economic signals"
+      ],
+      "disadvantages": [
+        "Subject to supply shocks",
+        "Seasonal patterns impact",
+        "Storage costs affect pricing",
+        "Transportation disruptions"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Equities vs Commodities",
+      "folder": "equities_vs_commodities",
+      "purpose": [
+        "Monitor growth-inflation dynamics",
+        "Detect commodity-driven stress",
+        "Identify risk asset rotation"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "XAU BGNL",
+          "Cl1"
+        ],
+        "derived": [
+          "MXUS_XAU_CORR",
+          "MXUS_CL1_CORR",
+          "EQUITY_COMMODITY_RATIO",
+          "SAFE_HAVEN_DEMAND",
+          "GROWTH_SENSITIVITY",
+          "INFLATION_RISK_SCORE"
+        ]
+      },
+      "advantages": [
+        "Growth cycle signals",
+        "Inflation regime detection",
+        "Safe haven monitoring",
+        "Real asset relationships"
+      ],
+      "disadvantages": [
+        "Commodity supply effects",
+        "Multiple correlation drivers",
+        "Sector composition bias",
+        "Trading hour differences"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Equities vs Bonds",
+      "folder": "equities_vs_bonds",
+      "purpose": [
+        "Monitor risk-on/risk-off dynamics",
+        "Detect flight to safety flows",
+        "Identify regime changes"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "USGG30YR",
+          "GT10"
+        ],
+        "derived": [
+          "MXUS_30Y_CORR",
+          "MXUS_10Y_CORR",
+          "EQUITY_BOND_RATIO",
+          "YIELD_CURVE_SLOPE",
+          "CROSS_ASSET_VOLATILITY",
+          "RISK_PARITY_SCORE"
+        ]
+      },
+      "advantages": [
+        "Classic risk relationship",
+        "Flight to quality signals",
+        "Regime change detection",
+        "Portfolio stress indicator"
+      ],
+      "disadvantages": [
+        "Rate environment dependent",
+        "Policy intervention effects",
+        "Correlation breakdown risk",
+        "Yield curve distortions"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Volatility vs Equities",
+      "folder": "volatility_vs_equities",
+      "purpose": [
+        "Monitor fear-greed relationship",
+        "Detect volatility breakdowns",
+        "Identify market sentiment shifts"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "VIX"
+        ],
+        "derived": [
+          "MXUS_VIX_CORR",
+          "MXUS_VIX_RATIO",
+          "FEAR_GREED_INDEX",
+          "VOLATILITY_PREMIUM",
+          "SENTIMENT_SCORE",
+          "MARKET_STRESS_INDICATOR"
+        ]
+      },
+      "advantages": [
+        "Classic relationship monitoring",
+        "Clear sentiment signals",
+        "Regime change detection",
+        "Market psychology insights"
+      ],
+      "disadvantages": [
+        "Volatility clustering effects",
+        "Correlation breakdown risk",
+        "US market centric view",
+        "Lag in extreme conditions"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Equity Dispersion",
+      "folder": "equity_dispersion",
+      "purpose": [
+        "Analyze dispersion among global equity markets",
+        "Detect anomalies through market divergences",
+        "Capture regional market stress"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "MXEU",
+          "MXJP"
+        ],
+        "derived": [
+          "EQUITY_MAX",
+          "EQUITY_MIN",
+          "EQUITY_DISPERSION",
+          "EQUITY_STD",
+          "EQUITY_RANGE_RATIO",
+          "EQUITY_DISP_MA7",
+          "EQUITY_DISP_STD7"
+        ]
+      },
+      "advantages": [
+        "Captures market divergences",
+        "Identifies regional stress",
+        "Shows market fragmentation",
+        "Useful for detecting contagion"
+      ],
+      "disadvantages": [
+        "Complex feature interactions",
+        "Requires careful threshold setting",
+        "May be affected by timezone differences",
+        "Sensitive to regional events"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Commodity Market Dispersion",
+      "folder": "commodity_dispersion",
+      "purpose": [
+        "Analyze dispersion among commodity markets",
+        "Detect anomalies through commodity divergences",
+        "Capture commodity market stress"
+      ],
+      "features": {
+        "base": [
+          "XAU BGNL",
+          "Cl1",
+          "CRY"
+        ],
+        "derived": [
+          "COMMODITY_MAX",
+          "COMMODITY_MIN",
+          "COMMODITY_DISPERSION",
+          "COMMODITY_STD",
+          "COMMODITY_RANGE_RATIO",
+          "COMMODITY_DISP_MA7",
+          "COMMODITY_DISP_STD7"
+        ]
+      },
+      "advantages": [
+        "Captures commodity market stress",
+        "Identifies sector-specific issues",
+        "Shows commodity market fragmentation",
+        "Useful for detecting supply/demand shocks"
+      ],
+      "disadvantages": [
+        "Affected by different commodity dynamics",
+        "Sensitive to geopolitical events",
+        "Complex seasonal patterns",
+        "Different trading hours impact"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Yield Curve Metrics",
+      "folder": "yield_curve_metrics",
+      "purpose": [
+        "Monitor yield curve shape",
+        "Detect curve inversions",
+        "Identify recession signals"
+      ],
+      "features": {
+        "base": [
+          "USGG30YR",
+          "USGG2YR",
+          "GTDEM30Y",
+          "GTDEM2Y"
+        ],
+        "derived": [
+          "US_YIELD_SPREAD",
+          "GER_YIELD_SPREAD",
+          "US_SPREAD_RATIO",
+          "GER_SPREAD_RATIO",
+          "CURVE_STEEPNESS",
+          "INVERSION_SIGNAL",
+          "TERM_PREMIUM_INDICATOR",
+          "RECESSION_PROBABILITY"
+        ]
+      },
+      "advantages": [
+        "Leading indicator properties",
+        "Economic cycle insights",
+        "Cross-country comparison",
+        "Historical reliability"
+      ],
+      "disadvantages": [
+        "QE distortion effects",
+        "Policy intervention impact",
+        "Lag in predictions",
+        "False recession signals"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Market Stress",
+      "folder": "market_stress",
+      "purpose": [
+        "Monitor overall market stress",
+        "Detect multi-asset pressure",
+        "Identify risk regime changes"
+      ],
+      "features": {
+        "base": [
+          "XAU BGNL",
+          "ECSURPUS",
+          "BDIY",
+          "CRY",
+          "DXY",
+          "JPY",
+          "GBP",
+          "Cl1",
+          "VIX",
+          "USGG30YR",
+          "GT10",
+          "MXUS",
+          "MXEU",
+          "MXJP",
+          "MXBR",
+          "MXRU",
+          "MXIN",
+          "MXCN"
+        ],
+        "derived": [
+          "VOLATILITY_REGIME",
+          "EQUITY_STRESS_SCORE",
+          "BOND_MARKET_STRESS",
+          "CURRENCY_PRESSURE",
+          "SAFE_HAVEN_DEMAND",
+          "CROSS_ASSET_STRESS",
+          "LIQUIDITY_CONDITIONS",
+          "RISK_APPETITE_INDEX"
+        ]
+      },
+      "advantages": [
+        "Multi-factor approach",
+        "Regime change detection",
+        "Cross-asset coverage",
+        "Leading indicator potential"
+      ],
+      "disadvantages": [
+        "Parameter sensitivity",
+        "Regime classification complexity",
+        "Signal lag in transitions",
+        "False signal risk"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Global Market Stress",
+      "folder": "global_market_stress",
+      "purpose": [
+        "Monitor global market conditions",
+        "Detect cross-regional stress",
+        "Identify systemic risks"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "MXEU",
+          "MXJP",
+          "VIX",
+          "DXY",
+          "USGG10YR",
+          "GTDEM10Y",
+          "XAU BGNL"
+        ],
+        "derived": [
+          "GLOBAL_EQUITY_STRESS",
+          "CROSS_MARKET_CORRELATIONS",
+          "VOLATILITY_REGIME",
+          "SAFE_HAVEN_FLOWS",
+          "FUNDING_STRESS",
+          "SYSTEMIC_RISK_SCORE",
+          "MARKET_LIQUIDITY_INDEX",
+          "GLOBAL_RISK_APPETITE"
+        ]
+      },
+      "advantages": [
+        "Comprehensive coverage",
+        "Systemic risk detection",
+        "Cross-market insights",
+        "Early warning signals"
+      ],
+      "disadvantages": [
+        "Complex interactions",
+        "Regional time differences",
+        "Multiple regime effects",
+        "Signal noise in calm periods"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Volatility Regime",
+      "folder": "volatility_regime",
+      "purpose": [
+        "Classify volatility states",
+        "Detect regime transitions",
+        "Identify volatility clustering"
+      ],
+      "features": {
+        "base": [
+          "VIX",
+          "MXUS",
+          "MXEU",
+          "MXJP",
+          "DXY",
+          "XAU BGNL"
+        ],
+        "derived": [
+          "VOLATILITY_STATE",
+          "REGIME_PROBABILITY",
+          "TRANSITION_SIGNAL",
+          "PERSISTENCE_SCORE",
+          "CROSS_ASSET_VOLATILITY",
+          "REGIME_STABILITY_INDEX",
+          "STRESS_ACCELERATION",
+          "CALM_DURATION"
+        ]
+      },
+      "advantages": [
+        "State classification clarity",
+        "Transition anticipation",
+        "Regime persistence tracking",
+        "Cross-asset perspective"
+      ],
+      "disadvantages": [
+        "Regime definition subjectivity",
+        "Transition lag detection",
+        "Parameter sensitivity",
+        "Classification uncertainty"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Cross Asset Momentum",
+      "folder": "cross_asset_momentum",
+      "purpose": [
+        "Track momentum across asset classes",
+        "Identify trend breakdowns",
+        "Detect regime changes"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "XAU BGNL",
+          "DXY",
+          "Cl1",
+          "BDIY"
+        ],
+        "derived": [
+          "EQUITY_MOMENTUM",
+          "GOLD_MOMENTUM",
+          "CURRENCY_MOMENTUM",
+          "OIL_MOMENTUM",
+          "SHIPPING_MOMENTUM",
+          "CROSS_ASSET_TREND_STRENGTH",
+          "MOMENTUM_DIVERGENCE"
+        ]
+      },
+      "advantages": [
+        "Captures trend breaks",
+        "Shows risk rotation",
+        "Identifies market turns",
+        "Multi-asset perspective"
+      ],
+      "disadvantages": [
+        "Momentum lag exists",
+        "Whipsaw in ranges",
+        "Different asset dynamics",
+        "Time horizon sensitivity"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Yield Curve Enhanced",
+      "folder": "yield_curve_enhanced",
+      "purpose": [
+        "Monitor curve dynamics",
+        "Detect yield curve stress",
+        "Identify monetary regime shifts"
+      ],
+      "features": {
+        "base": [
+          "USGG30YR",
+          "GT10",
+          "USGG2YR",
+          "USGG3M"
+        ],
+        "derived": [
+          "CURVE_STEEPNESS",
+          "TERM_PREMIUM",
+          "CROSS_COUNTRY_SPREADS",
+          "CURVE_MOMENTUM",
+          "BUTTERFLY_SPREAD",
+          "CURVE_TWIST_INDICATOR",
+          "GLOBAL_CURVE_STRESS",
+          "MONETARY_REGIME_INDEX"
+        ]
+      },
+      "advantages": [
+        "Comprehensive curve analysis",
+        "Global yield perspective",
+        "Monetary policy insights",
+        "Term structure signals"
+      ],
+      "disadvantages": [
+        "Complex curve dynamics",
+        "Central bank distortions",
+        "Technical factors impact",
+        "Multiple regime effects"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Combined Stress",
+      "folder": "combined_stress",
+      "purpose": [
+        "Integrate multiple stress indicators",
+        "Create comprehensive stress signal",
+        "Capture cross-asset stress events"
+      ],
+      "features": {
+        "base": [
+          "XAU BGNL",
+          "ECSURPUS",
+          "BDIY",
+          "CRY",
+          "DXY",
+          "JPY",
+          "GBP",
+          "Cl1",
+          "VIX",
+          "USGG30YR",
+          "GT10",
+          "USGG2YR",
+          "USGG3M",
+          "US0001M",
+          "GTDEM30Y",
+          "GTDEM10Y",
+          "GTDEM2Y",
+          "EONIA",
+          "GTITL30YR",
+          "GTITL10YR",
+          "GTITL2YR",
+          "GTJPY30YR",
+          "GTJPY10YR",
+          "GTJPY2YR",
+          "GTGBP30Y",
+          "GTGBP20Y",
+          "GTGBP2Y",
+          "LUMSTRUU",
+          "LMBITR",
+          "LUACTRUU",
+          "LF98TRUU",
+          "LG30TRUU",
+          "LP01TREU",
+          "EMUSTRUU",
+          "LF94TRUU",
+          "MXUS",
+          "MXEU",
+          "MXJP",
+          "MXBR",
+          "MXRU",
+          "MXIN",
+          "MXCN"
+        ],
+        "derived": [
+          "EQUITY_STRESS_SCORE",
+          "VOLATILITY_STRESS_SCORE",
+          "YIELD_STRESS_SCORE",
+          "CURRENCY_STRESS_SCORE",
+          "COMMODITY_STRESS_SCORE",
+          "COMBINED_STRESS_INDEX",
+          "STRESS_MOMENTUM",
+          "CROSS_ASSET_STRESS"
+        ]
+      },
+      "advantages": [
+        "Holistic market view",
+        "Reduces false positives",
+        "Captures systemic stress",
+        "Robust to isolated events"
+      ],
+      "disadvantages": [
+        "Complex aggregation needed",
+        "Parameter sensitivity",
+        "May miss localized stress",
+        "Potential signal dilution"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "VIX Momentum",
+      "folder": "vix_momentum",
+      "purpose": [
+        "Monitor volatility dynamics",
+        "Detect volatility regime shifts",
+        "Identify fear extremes"
+      ],
+      "features": {
+        "base": [
+          "VIX"
+        ],
+        "derived": [
+          "VIX_7D_CHANGE",
+          "VIX_7D_MAX",
+          "VIX_7D_STD",
+          "VOLATILITY_MOMENTUM",
+          "FEAR_GAUGE_SCORE",
+          "REGIME_CHANGE_SIGNAL",
+          "VOLATILITY_TERM_STRUCTURE",
+          "PANIC_INDEX"
+        ]
+      },
+      "advantages": [
+        "Clear fear signals",
+        "Regime shift detection",
+        "Market sentiment gauge",
+        "Extreme event capture"
+      ],
+      "disadvantages": [
+        "Lagging indicator aspects",
+        "Volatility clustering",
+        "Mean reversion effects",
+        "US market centric"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Yield Spread Momentum",
+      "folder": "yield_spread_momentum",
+      "purpose": [
+        "Monitor yield curve dynamics",
+        "Detect spread acceleration",
+        "Identify curve regime changes"
+      ],
+      "features": {
+        "base": [
+          "GT10",
+          "USGG2YR"
+        ],
+        "derived": [
+          "YIELD_SPREAD_2Y10Y",
+          "SPREAD_7D_CHANGE",
+          "SPREAD_7D_STD",
+          "MOMENTUM_SIGNAL",
+          "CURVE_VELOCITY",
+          "SPREAD_ACCELERATION",
+          "REGIME_CHANGE_INDICATOR",
+          "STRESS_PROBABILITY"
+        ]
+      },
+      "advantages": [
+        "Quick regime detection",
+        "Curve dynamics insight",
+        "Momentum-based signals",
+        "Historical reliability"
+      ],
+      "disadvantages": [
+        "Momentum lag effects",
+        "False momentum signals",
+        "Rate volatility impact",
+        "Technical noise"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "DXY-Gold Correlation",
+      "folder": "dxy_gold_correlation",
+      "purpose": [
+        "Monitor USD-Gold relationship",
+        "Detect safe-haven anomalies",
+        "Identify currency stress"
+      ],
+      "features": {
+        "base": [
+          "DXY",
+          "XAU BGNL"
+        ],
+        "derived": [
+          "DXY_7D_CHANGE",
+          "GOLD_7D_CHANGE",
+          "DXY_GOLD_RATIO",
+          "DXY_GOLD_CORR_7D",
+          "SAFE_HAVEN_SCORE",
+          "CURRENCY_STRESS_INDICATOR"
+        ]
+      },
+      "advantages": [
+        "Traditional relationship monitoring",
+        "Clear safe-haven signals",
+        "Currency crisis detection",
+        "Simple interpretation"
+      ],
+      "disadvantages": [
+        "Limited scope",
+        "Central bank influence",
+        "Trading hour mismatches",
+        "Regional factors impact"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Emerging vs Developed Markets",
+      "folder": "em_vs_dm",
+      "purpose": [
+        "Monitor EM-DM divergences",
+        "Detect global growth stress",
+        "Identify capital flow shifts"
+      ],
+      "features": {
+        "base": [
+          "MXCN",
+          "MXUS"
+        ],
+        "derived": [
+          "EM_DM_RATIO",
+          "EM_DM_CORRELATION",
+          "REGIONAL_DISPERSION",
+          "FLOW_MOMENTUM",
+          "RELATIVE_STRENGTH_INDEX",
+          "MARKET_BREADTH_INDICATOR"
+        ]
+      },
+      "advantages": [
+        "Global growth signals",
+        "Capital flow insights",
+        "Risk appetite indicator",
+        "Regional stress detection"
+      ],
+      "disadvantages": [
+        "Time zone differences",
+        "Market structure variations",
+        "Policy divergence effects",
+        "Currency impact on returns"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Oil-DXY Relationship",
+      "folder": "oil_dxy_relationship",
+      "purpose": [
+        "Monitor commodity currency dynamics",
+        "Detect global growth signals",
+        "Identify dollar funding stress"
+      ],
+      "features": {
+        "base": [
+          "Cl1",
+          "DXY"
+        ],
+        "derived": [
+          "OIL_DXY_RATIO",
+          "OIL_7D_CHANGE",
+          "DXY_7D_CHANGE",
+          "CORRELATION_REGIME",
+          "COMMODITY_CURRENCY_STRESS",
+          "GROWTH_MOMENTUM_SIGNAL"
+        ]
+      },
+      "advantages": [
+        "Global growth indicator",
+        "Dollar stress signals",
+        "Commodity cycle insights",
+        "Funding pressure detection"
+      ],
+      "disadvantages": [
+        "Oil supply shock effects",
+        "Currency intervention impact",
+        "Multiple correlation drivers",
+        "Regional market factors"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "US-EU Yield Spread",
+      "folder": "us_eu_yield_spread",
+      "purpose": [
+        "Monitor policy divergence",
+        "Detect sovereign stress",
+        "Identify rate regime shifts"
+      ],
+      "features": {
+        "base": [
+          "GT10",
+          "GTDEM10Y"
+        ],
+        "derived": [
+          "US_EU_SPREAD",
+          "SPREAD_7D_CHANGE",
+          "SPREAD_MOMENTUM",
+          "POLICY_DIVERGENCE_SCORE",
+          "SOVEREIGN_STRESS_INDEX",
+          "RATE_DIFFERENTIAL_REGIME"
+        ]
+      },
+      "advantages": [
+        "Policy insight signals",
+        "Sovereign risk detection",
+        "Currency impact insights",
+        "Rate regime indicators"
+      ],
+      "disadvantages": [
+        "Central bank intervention",
+        "Policy communication effects",
+        "Technical market factors",
+        "Term premium variations"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Bond Market Stress",
+      "folder": "bond_market_stress",
+      "purpose": [
+        "Monitor global bond market conditions",
+        "Detect unusual yield curve movements",
+        "Identify sovereign stress events"
+      ],
+      "features": {
+        "base": [
+          "LUACTRUU",
+          "GT10"
+        ],
+        "derived": [
+          "US_YIELD_CURVE_SLOPE",
+          "GER_YIELD_CURVE_SLOPE",
+          "GLOBAL_YIELD_DISPERSION",
+          "YIELD_CURVE_MOMENTUM",
+          "BOND_INDEX_VOLATILITY",
+          "CROSS_MARKET_CORRELATION"
+        ]
+      },
+      "advantages": [
+        "Captures sovereign risk events",
+        "Identifies monetary policy stress",
+        "Shows funding market pressure",
+        "Early warning for credit events"
+      ],
+      "disadvantages": [
+        "Affected by central bank policies",
+        "Complex yield curve dynamics",
+        "Lag in some stress situations",
+        "Regional policy differences impact"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "JPY-Yield Correlation",
+      "folder": "jpy_yield_correlation",
+      "purpose": [
+        "Monitor carry trade dynamics",
+        "Detect funding market stress",
+        "Identify risk sentiment shifts"
+      ],
+      "features": {
+        "base": [
+          "JPY",
+          "GTJPY10YR"
+        ],
+        "derived": [
+          "YIELD_DIFFERENTIAL",
+          "JPY_CARRY_SCORE",
+          "CORRELATION_REGIME",
+          "FUNDING_STRESS_INDEX",
+          "RISK_SENTIMENT_INDICATOR",
+          "CARRY_TRADE_MOMENTUM"
+        ]
+      },
+      "advantages": [
+        "Funding stress signals",
+        "Carry trade insights",
+        "Risk-off detection",
+        "Global liquidity indicator"
+      ],
+      "disadvantages": [
+        "Policy intervention risk",
+        "Yield curve distortions",
+        "Complex carry dynamics",
+        "Regional market effects"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Equity-VIX Ratio",
+      "folder": "equity_vix_ratio",
+      "purpose": [
+        "Monitor risk-adjusted returns",
+        "Detect market complacency",
+        "Identify volatility dislocations"
+      ],
+      "features": {
+        "base": [
+          "MXUS",
+          "VIX"
+        ],
+        "derived": [
+          "EQUITY_VIX_RATIO",
+          "RATIO_7D_CHANGE",
+          "RATIO_7D_STD",
+          "RISK_ADJUSTED_RETURN",
+          "COMPLACENCY_INDICATOR",
+          "VOLATILITY_PREMIUM",
+          "MARKET_STRESS_SIGNAL",
+          "RISK_APPETITE_SCORE"
+        ]
+      },
+      "advantages": [
+        "Risk-return perspective",
+        "Market sentiment gauge",
+        "Complacency detection",
+        "Historical reliability"
+      ],
+      "disadvantages": [
+        "Ratio instability in extremes",
+        "Volatility basis effects",
+        "US market dependency",
+        "Mean reversion complexity"
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,34 @@
+Strategy 18: Yield Spread Momentum
+
+Purpose:
+- Monitor yield curve dynamics
+- Detect spread acceleration
+- Identify curve regime changes
+
+Features:
+Base Features:
+- USGG10YR (US 10Y yield)
+- USGG2YR (US 2Y yield)
+- VIX (Volatility Index)
+
+Derived Features:
+- YIELD_SPREAD_2Y10Y
+- SPREAD_7D_CHANGE
+- SPREAD_7D_STD
+- MOMENTUM_SIGNAL
+- CURVE_VELOCITY
+- SPREAD_ACCELERATION
+- REGIME_CHANGE_INDICATOR
+- STRESS_PROBABILITY
+
+Advantages:
+- Quick regime detection
+- Curve dynamics insight
+- Momentum-based signals
+- Historical reliability
+
+Disadvantages:
+- Momentum lag effects
+- False momentum signals
+- Rate volatility impact
+- Technical noise 

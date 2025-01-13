@@ -1,0 +1,37 @@
+Strategy 14: Cross Asset Momentum
+
+Purpose:
+- Track momentum across asset classes
+- Identify trend breakdowns
+- Detect regime changes
+
+Features:
+Base Features:
+- MXUS (US equity index)
+- VIX (Volatility index)
+- XAU BGNL (Gold price)
+- USGG10YR (US 10Y yield)
+- DXY (Dollar index)
+- Cl1 (Crude Oil)
+
+Derived Features:
+- EQUITY_MOMENTUM (7-day returns)
+- VOLATILITY_MOMENTUM
+- GOLD_MOMENTUM
+- YIELD_MOMENTUM
+- CURRENCY_MOMENTUM
+- OIL_MOMENTUM
+- CROSS_ASSET_TREND_STRENGTH
+- MOMENTUM_DIVERGENCE
+
+Advantages:
+- Captures trend breaks
+- Shows risk rotation
+- Identifies market turns
+- Multi-asset perspective
+
+Disadvantages:
+- Momentum lag exists
+- Whipsaw in ranges
+- Different asset dynamics
+- Time horizon sensitivity 

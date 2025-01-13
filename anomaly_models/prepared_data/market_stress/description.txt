@@ -1,0 +1,36 @@
+Strategy 11: Market Stress
+
+Purpose:
+- Monitor overall market stress
+- Detect multi-asset pressure
+- Identify risk regime changes
+
+Features:
+Base Features:
+- VIX (Volatility index)
+- MXUS (US equity index)
+- USGG10YR (US 10Y yield)
+- DXY (Dollar index)
+- XAU BGNL (Gold price)
+
+Derived Features:
+- VOLATILITY_REGIME
+- EQUITY_STRESS_SCORE
+- BOND_MARKET_STRESS
+- CURRENCY_PRESSURE
+- SAFE_HAVEN_DEMAND
+- CROSS_ASSET_STRESS
+- LIQUIDITY_CONDITIONS
+- RISK_APPETITE_INDEX
+
+Advantages:
+- Multi-factor approach
+- Regime change detection
+- Cross-asset coverage
+- Leading indicator potential
+
+Disadvantages:
+- Parameter sensitivity
+- Regime classification complexity
+- Signal lag in transitions
+- False signal risk 

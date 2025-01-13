@@ -1,0 +1,36 @@
+Strategy 12: Global Market Stress
+
+Purpose:
+- Monitor global market conditions
+- Detect cross-regional stress
+- Identify systemic risks
+
+Features:
+Base Features:
+- MXUS, MXEU, MXJP (Regional equity indices)
+- VIX (Volatility index)
+- DXY (Dollar index)
+- USGG10YR, GTDEM10Y (US/German yields)
+- XAU BGNL (Gold price)
+
+Derived Features:
+- GLOBAL_EQUITY_STRESS
+- CROSS_MARKET_CORRELATIONS
+- VOLATILITY_REGIME
+- SAFE_HAVEN_FLOWS
+- FUNDING_STRESS
+- SYSTEMIC_RISK_SCORE
+- MARKET_LIQUIDITY_INDEX
+- GLOBAL_RISK_APPETITE
+
+Advantages:
+- Comprehensive coverage
+- Systemic risk detection
+- Cross-market insights
+- Early warning signals
+
+Disadvantages:
+- Complex interactions
+- Regional time differences
+- Multiple regime effects
+- Signal noise in calm periods 

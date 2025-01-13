@@ -1,0 +1,33 @@
+Strategy 21: JPY-Yield Correlation
+
+Purpose:
+- Monitor carry trade dynamics
+- Detect funding market stress
+- Identify risk sentiment shifts
+
+Features:
+Base Features:
+- JPY (Japanese Yen rate)
+- GTJPY10YR (Japanese 10Y yield)
+- USGG10YR (US 10Y yield)
+- VIX (Volatility index)
+
+Derived Features:
+- YIELD_DIFFERENTIAL
+- JPY_CARRY_SCORE
+- CORRELATION_REGIME
+- FUNDING_STRESS_INDEX
+- RISK_SENTIMENT_INDICATOR
+- CARRY_TRADE_MOMENTUM
+
+Advantages:
+- Funding stress signals
+- Carry trade insights
+- Risk-off detection
+- Global liquidity indicator
+
+Disadvantages:
+- Policy intervention risk
+- Yield curve distortions
+- Complex carry dynamics
+- Regional market effects 

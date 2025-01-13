@@ -1,0 +1,42 @@
+Strategy 1: All Features
+
+Purpose:
+- Provide comprehensive market analysis
+- Capture cross-asset relationships
+- Maximize available information for anomaly detection
+
+Features:
+Base Features:
+- VIX (CBOE Volatility Index)
+- MXUS, MXEU, MXJP, MXCN (Equity indices for US, Europe, Japan, China)
+- XAU BGNL (Gold price index)
+- Cl1 (Crude Oil futures)
+- CRY (Thomson Reuters/CoreCommodity CRB Index)
+- DXY (US Dollar Index)
+- USGG30YR, USGG2YR (US Treasury yields)
+- GT10 (US 10-year Treasury yield)
+- GTDEM30YR, GTDEM2YR, GTDEM10Y (German Treasury yields)
+- GTJPY10YR (Japanese 10-year yield)
+- LUACTRUU (Bloomberg US Aggregate Bond Index)
+- BDIY (Baltic Dry Index)
+- JPY (Japanese Yen exchange rate)
+
+Derived Features:
+- Cross-asset correlations
+- Rolling statistics
+- Market stress indicators
+- Dispersion metrics
+- Yield curve metrics
+- Volatility regime indicators
+
+Advantages:
+- Maximum information utilization
+- Captures complex market interactions
+- Robust to different types of stress
+- Comprehensive risk coverage
+
+Disadvantages:
+- High dimensionality
+- Complex feature interactions
+- Risk of overfitting
+- Computationally intensive 

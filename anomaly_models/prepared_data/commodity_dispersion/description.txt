@@ -1,0 +1,33 @@
+Strategy 9: Commodity Market Dispersion
+
+Purpose:
+- Analyze dispersion among commodity markets
+- Detect anomalies through commodity divergences
+- Capture commodity market stress
+
+Features:
+Base Features:
+- XAU BGNL (Gold Price)
+- Cl1 (Crude Oil)
+- CRY (Thomson Reuters/CoreCommodity CRB Index)
+
+Derived Features:
+- COMMODITY_MAX (Maximum return across commodities)
+- COMMODITY_MIN (Minimum return across commodities)
+- COMMODITY_DISPERSION (Max-Min spread)
+- COMMODITY_STD (Standard deviation)
+- COMMODITY_RANGE_RATIO (Dispersion/Mean ratio)
+- COMMODITY_DISP_MA7 (7-day moving average of dispersion)
+- COMMODITY_DISP_STD7 (7-day standard deviation of dispersion)
+
+Advantages:
+- Captures commodity market stress
+- Identifies sector-specific issues
+- Shows commodity market fragmentation
+- Useful for detecting supply/demand shocks
+
+Disadvantages:
+- Affected by different commodity dynamics
+- Sensitive to geopolitical events
+- Complex seasonal patterns
+- Different trading hours impact 

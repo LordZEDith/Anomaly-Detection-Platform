@@ -1,0 +1,33 @@
+Strategy 20: Emerging vs Developed Markets
+
+Purpose:
+- Monitor EM-DM divergences
+- Detect global growth stress
+- Identify capital flow shifts
+
+Features:
+Base Features:
+- MXEF (Emerging Markets Index)
+- MXUS (US Market Index)
+- MXEU (European Market Index)
+- MXJP (Japanese Market Index)
+
+Derived Features:
+- EM_DM_RATIO
+- EM_DM_CORRELATION
+- REGIONAL_DISPERSION
+- FLOW_MOMENTUM
+- RELATIVE_STRENGTH_INDEX
+- MARKET_BREADTH_INDICATOR
+
+Advantages:
+- Global growth signals
+- Capital flow insights
+- Risk appetite indicator
+- Regional stress detection
+
+Disadvantages:
+- Time zone differences
+- Market structure variations
+- Policy divergence effects
+- Currency impact on returns 

@@ -1,0 +1,33 @@
+Strategy 17: VIX Momentum
+
+Purpose:
+- Monitor volatility dynamics
+- Detect volatility regime shifts
+- Identify fear extremes
+
+Features:
+Base Features:
+- VIX (Volatility Index)
+- MXUS (US equity index)
+
+Derived Features:
+- VIX_7D_CHANGE
+- VIX_7D_MAX
+- VIX_7D_STD
+- VOLATILITY_MOMENTUM
+- FEAR_GAUGE_SCORE
+- REGIME_CHANGE_SIGNAL
+- VOLATILITY_TERM_STRUCTURE
+- PANIC_INDEX
+
+Advantages:
+- Clear fear signals
+- Regime shift detection
+- Market sentiment gauge
+- Extreme event capture
+
+Disadvantages:
+- Lagging indicator aspects
+- Volatility clustering
+- Mean reversion effects
+- US market centric 

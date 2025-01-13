@@ -1,0 +1,18 @@
+VIX
+MXUS
+MXEU
+MXJP
+DXY
+XAU BGNL
+VIX_vol_regime
+MXUS_vol_regime
+MXEU_vol_regime
+MXJP_vol_regime
+DXY_vol_regime
+XAU BGNL_vol_regime
+VIX_trend
+MXUS_trend
+MXEU_trend
+MXJP_trend
+DXY_trend
+XAU BGNL_trend

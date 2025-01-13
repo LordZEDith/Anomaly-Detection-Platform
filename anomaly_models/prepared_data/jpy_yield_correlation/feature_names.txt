@@ -1,0 +1,3 @@
+JPY_7D_Change
+GTJPY10YR_7D_Change
+JPY_Yield_Ratio

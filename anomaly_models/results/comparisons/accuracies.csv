@@ -1,0 +1,26 @@
+Strategy,Best Supervised Accuracy,Best Unsupervised Accuracy
+all_features,0.9193,0.7982
+vix_only,0.8655,0.8655
+equities,0.8296,0.7803
+commodities,0.8296,0.7489
+equities_vs_commodities,0.8655,0.7803
+equities_vs_bonds,0.8386,0.7758
+volatility_vs_equities,0.8655,0.8206
+equity_dispersion,0.9013,0.7892
+commodity_dispersion,0.8969,0.7534
+yield_curve_metrics,0.8879,0.7758
+market_stress,0.9238,0.8161
+yield_curve_enhanced,0.8655,0.7713
+global_market_stress,0.9372,0.8251
+volatility_regime,0.9058,0.8072
+cross_asset_momentum,0.9327,0.8251
+combined_stress,0.9283,0.8072
+vix_momentum,0.8879,0.8430
+yield_spread_momentum,0.8206,0.7489
+dxy_gold_correlation,0.8386,0.7848
+equity_vix_ratio,0.8565,0.8027
+oil_dxy_relationship,0.7937,0.7848
+us_eu_yield_spread,0.8206,0.7848
+em_vs_dm,0.8341,0.8296
+bond_market_stress,0.8161,0.7982
+jpy_yield_correlation,0.7937,0.7534

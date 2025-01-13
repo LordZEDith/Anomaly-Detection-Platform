@@ -1,0 +1,31 @@
+Strategy 19: DXY-Gold Correlation
+
+Purpose:
+- Monitor USD-Gold relationship
+- Detect safe-haven anomalies
+- Identify currency stress
+
+Features:
+Base Features:
+- DXY (US Dollar Index)
+- XAU BGNL (Gold Price)
+
+Derived Features:
+- DXY_7D_CHANGE (7-day USD returns)
+- GOLD_7D_CHANGE (7-day Gold returns)
+- DXY_GOLD_RATIO
+- DXY_GOLD_CORR_7D (7-day correlation)
+- SAFE_HAVEN_SCORE
+- CURRENCY_STRESS_INDICATOR
+
+Advantages:
+- Traditional relationship monitoring
+- Clear safe-haven signals
+- Currency crisis detection
+- Simple interpretation
+
+Disadvantages:
+- Limited scope
+- Central bank influence
+- Trading hour mismatches
+- Regional factors impact 

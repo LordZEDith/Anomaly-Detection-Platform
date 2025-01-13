@@ -1,0 +1,3 @@
+Oil_DXY_Ratio
+Oil_7D_Change
+Oil_DXY_Ratio_7D_Change

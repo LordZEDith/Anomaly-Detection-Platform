@@ -1,0 +1,32 @@
+Strategy 21: Oil-DXY Relationship
+
+Purpose:
+- Monitor commodity currency dynamics
+- Detect global growth signals
+- Identify dollar funding stress
+
+Features:
+Base Features:
+- Cl1 (Crude Oil futures)
+- DXY (US Dollar Index)
+- VIX (Volatility Index)
+
+Derived Features:
+- OIL_DXY_RATIO
+- OIL_7D_CHANGE
+- DXY_7D_CHANGE
+- CORRELATION_REGIME
+- COMMODITY_CURRENCY_STRESS
+- GROWTH_MOMENTUM_SIGNAL
+
+Advantages:
+- Global growth indicator
+- Dollar stress signals
+- Commodity cycle insights
+- Funding pressure detection
+
+Disadvantages:
+- Oil supply shock effects
+- Currency intervention impact
+- Multiple correlation drivers
+- Regional market factors 

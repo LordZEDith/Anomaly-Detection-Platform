@@ -1,0 +1,86 @@
+{
+  "supported_symbols": {
+    "equity_indices": {
+      "MXUS": {
+        "symbol": "SPY",
+        "description": "S&P 500 ETF as proxy for US market"
+      },
+      "MXEU": {
+        "symbol": "VGK",
+        "description": "Vanguard FTSE Europe ETF as proxy for European market"
+      },
+      "MXJP": {
+        "symbol": "EWJ",
+        "description": "iShares MSCI Japan ETF as proxy for Japanese market"
+      },
+      "MXBR": {
+        "symbol": "EWZ",
+        "description": "iShares MSCI Brazil ETF"
+      },
+      "MXRU": {
+        "symbol": "RSX",
+        "description": "VanEck Russia ETF"
+      },
+      "MXIN": {
+        "symbol": "INDA",
+        "description": "iShares MSCI India ETF"
+      },
+      "MXCN": {
+        "symbol": "MCHI",
+        "description": "iShares MSCI China ETF"
+      }
+    },
+    "commodities": {
+      "XAU BGNL": {
+        "symbol": "GLD",
+        "description": "SPDR Gold Trust ETF as proxy for gold"
+      },
+      "Cl1": {
+        "symbol": "USO",
+        "description": "United States Oil Fund as proxy for crude oil"
+      },
+      "CRY": {
+        "symbol": "DBC",
+        "description": "Invesco DB Commodity Index Tracking Fund"
+      }
+    },
+    "volatility": {
+      "VIX": {
+        "symbol": "^VIX",
+        "description": "CBOE Volatility Index"
+      }
+    },
+    "currencies": {
+      "DXY": {
+        "symbol": "UUP",
+        "description": "Invesco DB US Dollar Index Bullish Fund as proxy for USD"
+      },
+      "JPY": {
+        "symbol": "FXY",
+        "description": "Invesco CurrencyShares Japanese Yen Trust"
+      },
+      "GBP": {
+        "symbol": "FXB",
+        "description": "Invesco CurrencyShares British Pound Sterling Trust"
+      }
+    },
+    "bonds": {
+      "USGG30YR": {
+        "symbol": "TMF",
+        "description": "Direxion Daily 20+ Year Treasury Bull 3X as proxy for long-term bonds"
+      },
+      "USGG10YR": {
+        "symbol": "IEF",
+        "description": "iShares 7-10 Year Treasury Bond ETF"
+      },
+      "USGG2YR": {
+        "symbol": "SHY",
+        "description": "iShares 1-3 Year Treasury Bond ETF"
+      },
+      "LUMSTRUU": {
+        "symbol": "AGG",
+        "description": "iShares Core U.S. Aggregate Bond ETF"
+      }
+    }
+  }
+} 

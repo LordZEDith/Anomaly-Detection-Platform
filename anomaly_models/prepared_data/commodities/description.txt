@@ -1,0 +1,32 @@
+Strategy 4: Commodities
+
+Purpose:
+- Monitor commodity market stress
+- Detect safe-haven flows
+- Identify economic activity signals
+
+Features:
+Base Features:
+- XAU BGNL (Gold Price Index)
+- Cl1 (Crude Oil Futures)
+- CRY (Thomson Reuters/CoreCommodity CRB Index)
+
+Derived Features:
+- GOLD_MOMENTUM (7-day change)
+- OIL_MOMENTUM (7-day change)
+- CRB_MOMENTUM (7-day change)
+- COMMODITY_VOLATILITY
+- SAFE_HAVEN_RATIO (Gold/Oil ratio)
+- COMMODITY_TREND_STRENGTH
+
+Advantages:
+- Captures flight to safety
+- Reflects global demand
+- Indicates geopolitical risk
+- Early economic signals
+
+Disadvantages:
+- Subject to supply shocks
+- Seasonal patterns impact
+- Storage costs affect pricing
+- Transportation disruptions 

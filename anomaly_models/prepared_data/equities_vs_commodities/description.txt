@@ -1,0 +1,33 @@
+Strategy 5: Equities vs Commodities Cross-Asset Correlation
+
+Purpose:
+- Monitor growth-inflation dynamics
+- Detect commodity-driven stress
+- Identify risk asset rotation
+
+Features:
+Base Features:
+- MXUS (MSCI USA Index)
+- XAU BGNL (Gold Price Index)
+- Cl1 (Crude Oil Futures)
+- CRY (Commodity Index)
+
+Derived Features:
+- MXUS_XAU_CORR (Equity-Gold correlation)
+- MXUS_CL1_CORR (Equity-Oil correlation)
+- EQUITY_COMMODITY_RATIO
+- SAFE_HAVEN_DEMAND
+- GROWTH_SENSITIVITY
+- INFLATION_RISK_SCORE
+
+Advantages:
+- Growth cycle signals
+- Inflation regime detection
+- Safe haven monitoring
+- Real asset relationships
+
+Disadvantages:
+- Commodity supply effects
+- Multiple correlation drivers
+- Sector composition bias
+- Trading hour differences 

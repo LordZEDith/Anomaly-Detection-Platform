@@ -1,0 +1,3 @@
+MXCN_MXUS_Ratio
+MXCN_7D_Change
+MXCN_MXUS_Ratio_7D_Change

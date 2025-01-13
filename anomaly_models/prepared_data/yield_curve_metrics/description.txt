@@ -1,0 +1,34 @@
+Strategy 10: Yield Curve Metrics
+
+Purpose:
+- Monitor yield curve shape
+- Detect curve inversions
+- Identify recession signals
+
+Features:
+Base Features:
+- USGG30YR, USGG2YR (US Treasury yields)
+- GTDEM30Y, GTDEM2Y (German yields)
+- GT10 (US 10Y yield)
+
+Derived Features:
+- US_YIELD_SPREAD (30Y-2Y)
+- GER_YIELD_SPREAD (30Y-2Y)
+- US_SPREAD_RATIO
+- GER_SPREAD_RATIO
+- CURVE_STEEPNESS
+- INVERSION_SIGNAL
+- TERM_PREMIUM_INDICATOR
+- RECESSION_PROBABILITY
+
+Advantages:
+- Leading indicator properties
+- Economic cycle insights
+- Cross-country comparison
+- Historical reliability
+
+Disadvantages:
+- QE distortion effects
+- Policy intervention impact
+- Lag in predictions
+- False recession signals 

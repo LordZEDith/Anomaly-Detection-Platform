@@ -1,0 +1,4 @@
+VIX
+VIX_7D_Change
+VIX_7D_High
+VIX_7D_StdDev

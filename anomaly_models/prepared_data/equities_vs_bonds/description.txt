@@ -1,0 +1,33 @@
+Strategy 6: Equities vs Bonds Cross-Asset Correlation
+
+Purpose:
+- Monitor risk-on/risk-off dynamics
+- Detect flight to safety flows
+- Identify regime changes
+
+Features:
+Base Features:
+- MXUS (MSCI USA Index)
+- USGG30YR (US 30-Year Treasury Yield)
+- GT10 (US 10-Year Treasury Yield)
+- LUACTRUU (US Aggregate Bond Index)
+
+Derived Features:
+- MXUS_30Y_CORR (Equity-30Y correlation)
+- MXUS_10Y_CORR (Equity-10Y correlation)
+- EQUITY_BOND_RATIO
+- YIELD_CURVE_SLOPE
+- CROSS_ASSET_VOLATILITY
+- RISK_PARITY_SCORE
+
+Advantages:
+- Classic risk relationship
+- Flight to quality signals
+- Regime change detection
+- Portfolio stress indicator
+
+Disadvantages:
+- Rate environment dependent
+- Policy intervention effects
+- Correlation breakdown risk
+- Yield curve distortions 

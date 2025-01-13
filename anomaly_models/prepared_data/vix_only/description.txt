@@ -1,0 +1,30 @@
+Strategy 2: VIX Only
+
+Purpose:
+- Monitor market fear gauge
+- Detect volatility spikes
+- Identify risk perception shifts
+
+Features:
+Base Features:
+- VIX (CBOE Volatility Index)
+
+Derived Features:
+- VIX_LEVEL
+- VIX_MOMENTUM
+- VIX_REGIME
+- FEAR_INDEX
+- VOLATILITY_TREND
+- MARKET_STRESS_SIGNAL
+
+Advantages:
+- Simple interpretation
+- Quick signal generation
+- Well-known indicator
+- Liquid benchmark
+
+Disadvantages:
+- Single factor limitation
+- US market focus
+- Potential false signals
+- Backward-looking nature 

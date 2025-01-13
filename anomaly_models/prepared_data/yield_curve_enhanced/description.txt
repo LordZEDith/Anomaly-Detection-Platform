@@ -1,0 +1,34 @@
+Strategy 10: Yield Curve Enhanced
+
+Purpose:
+- Monitor curve dynamics
+- Detect yield curve stress
+- Identify monetary regime shifts
+
+Features:
+Base Features:
+- USGG30YR, USGG10YR, USGG2YR (US yields)
+- GTDEM30Y, GTDEM10Y, GTDEM2Y (German yields)
+- GTJPY10YR (Japanese yields)
+
+Derived Features:
+- CURVE_STEEPNESS
+- TERM_PREMIUM
+- CROSS_COUNTRY_SPREADS
+- CURVE_MOMENTUM
+- BUTTERFLY_SPREAD
+- CURVE_TWIST_INDICATOR
+- GLOBAL_CURVE_STRESS
+- MONETARY_REGIME_INDEX
+
+Advantages:
+- Comprehensive curve analysis
+- Global yield perspective
+- Monetary policy insights
+- Term structure signals
+
+Disadvantages:
+- Complex curve dynamics
+- Central bank distortions
+- Technical factors impact
+- Multiple regime effects 

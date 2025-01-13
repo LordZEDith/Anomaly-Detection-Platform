@@ -1,0 +1,33 @@
+Strategy 11: Bond Market Stress
+
+Purpose:
+- Monitor global bond market conditions
+- Detect unusual yield curve movements
+- Identify sovereign stress events
+
+Features:
+Base Features:
+- USGG30YR, USGG2YR (US Treasury yields)
+- GTDEM30Y, GTDEM2Y (German Treasury yields)
+- GTJPY10YR (Japanese 10-year yield)
+- LUACTRUU (Bloomberg US Aggregate Bond Index)
+
+Derived Features:
+- US_YIELD_CURVE_SLOPE (30Y-2Y spread)
+- GER_YIELD_CURVE_SLOPE (30Y-2Y spread)
+- GLOBAL_YIELD_DISPERSION
+- YIELD_CURVE_MOMENTUM
+- BOND_INDEX_VOLATILITY
+- CROSS_MARKET_CORRELATION
+
+Advantages:
+- Captures sovereign risk events
+- Identifies monetary policy stress
+- Shows funding market pressure
+- Early warning for credit events
+
+Disadvantages:
+- Affected by central bank policies
+- Complex yield curve dynamics
+- Lag in some stress situations
+- Regional policy differences impact 

@@ -1,0 +1,36 @@
+Strategy 16: Combined Stress
+
+Purpose:
+- Integrate multiple stress indicators
+- Create comprehensive stress signal
+- Capture cross-asset stress events
+
+Features:
+Base Features:
+- VIX (Volatility index)
+- MXUS (US equity index)
+- XAU BGNL (Gold price)
+- USGG30YR, USGG2YR (US yields)
+- DXY (Dollar index)
+
+Derived Features:
+- EQUITY_STRESS_SCORE
+- VOLATILITY_STRESS_SCORE
+- YIELD_STRESS_SCORE
+- CURRENCY_STRESS_SCORE
+- COMMODITY_STRESS_SCORE
+- COMBINED_STRESS_INDEX
+- STRESS_MOMENTUM
+- CROSS_ASSET_STRESS
+
+Advantages:
+- Holistic market view
+- Reduces false positives
+- Captures systemic stress
+- Robust to isolated events
+
+Disadvantages:
+- Complex aggregation needed
+- Parameter sensitivity
+- May miss localized stress
+- Potential signal dilution 

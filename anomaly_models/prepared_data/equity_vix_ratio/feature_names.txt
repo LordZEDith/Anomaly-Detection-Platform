@@ -1,0 +1,3 @@
+MXUS_VIX_Ratio
+MXUS_7D_Change
+MXUS_VIX_Ratio_7D_Change

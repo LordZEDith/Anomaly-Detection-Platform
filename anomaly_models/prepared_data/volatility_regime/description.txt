@@ -1,0 +1,35 @@
+Strategy 13: Volatility Regime
+
+Purpose:
+- Classify volatility states
+- Detect regime transitions
+- Identify volatility clustering
+
+Features:
+Base Features:
+- VIX (Volatility Index)
+- MXUS (US equity index)
+- USGG10YR (US 10Y yield)
+- DXY (Dollar index)
+
+Derived Features:
+- VOLATILITY_STATE
+- REGIME_PROBABILITY
+- TRANSITION_SIGNAL
+- PERSISTENCE_SCORE
+- CROSS_ASSET_VOLATILITY
+- REGIME_STABILITY_INDEX
+- STRESS_ACCELERATION
+- CALM_DURATION
+
+Advantages:
+- State classification clarity
+- Transition anticipation
+- Regime persistence tracking
+- Cross-asset perspective
+
+Disadvantages:
+- Regime definition subjectivity
+- Transition lag detection
+- Parameter sensitivity
+- Classification uncertainty 

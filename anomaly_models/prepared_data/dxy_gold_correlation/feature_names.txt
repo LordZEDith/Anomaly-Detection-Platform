@@ -1,0 +1,3 @@
+DXY_Gold_Ratio
+DXY_7D_Change
+Gold_7D_Change

@@ -1,0 +1,8 @@
+USGG30YR
+GT10
+USGG2YR
+USGG3M
+yield_curve_slope
+yield_slope_ma_ratio
+yield_curve_steepness
+yield_curve_curvature

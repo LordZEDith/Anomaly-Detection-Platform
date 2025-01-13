@@ -1,0 +1,109 @@
+XAU BGNL
+ECSURPUS
+BDIY
+CRY
+DXY
+JPY
+GBP
+Cl1
+VIX
+USGG30YR
+GT10
+USGG2YR
+USGG3M
+US0001M
+GTDEM30Y
+GTDEM10Y
+GTDEM2Y
+EONIA
+GTITL30YR
+GTITL10YR
+GTITL2YR
+GTJPY30YR
+GTJPY10YR
+GTJPY2YR
+GTGBP30Y
+GTGBP20Y
+GTGBP2Y
+LUMSTRUU
+LMBITR
+LUACTRUU
+LF98TRUU
+LG30TRUU
+LP01TREU
+EMUSTRUU
+LF94TRUU
+MXUS
+MXEU
+MXJP
+MXBR
+MXRU
+MXIN
+MXCN
+VIX_ma_7
+VIX_std_7
+VIX_min_7
+VIX_max_7
+VIX_zscore_7
+VIX_ma_14
+VIX_std_14
+VIX_min_14
+VIX_max_14
+VIX_zscore_14
+VIX_ma_21
+VIX_std_21
+VIX_min_21
+VIX_max_21
+VIX_zscore_21
+XAU BGNL_ma_7
+XAU BGNL_std_7
+XAU BGNL_min_7
+XAU BGNL_max_7
+XAU BGNL_zscore_7
+XAU BGNL_ma_14
+XAU BGNL_std_14
+XAU BGNL_min_14
+XAU BGNL_max_14
+XAU BGNL_zscore_14
+XAU BGNL_ma_21
+XAU BGNL_std_21
+XAU BGNL_min_21
+XAU BGNL_max_21
+XAU BGNL_zscore_21
+DXY_ma_7
+DXY_std_7
+DXY_min_7
+DXY_max_7
+DXY_zscore_7
+DXY_ma_14
+DXY_std_14
+DXY_min_14
+DXY_max_14
+DXY_zscore_14
+DXY_ma_21
+DXY_std_21
+DXY_min_21
+DXY_max_21
+DXY_zscore_21
+Cl1_ma_7
+Cl1_std_7
+Cl1_min_7
+Cl1_max_7
+Cl1_zscore_7
+Cl1_ma_14
+Cl1_std_14
+Cl1_min_14
+Cl1_max_14
+Cl1_zscore_14
+Cl1_ma_21
+Cl1_std_21
+Cl1_min_21
+Cl1_max_21
+Cl1_zscore_21
+vix_ma_ratio
+vix_percentile
+equity_vol_ratio
+safe_haven_flow
+gold_equity_corr
+yield_curve_slope
+yield_slope_ma_ratio

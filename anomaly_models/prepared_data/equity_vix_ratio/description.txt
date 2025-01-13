@@ -1,0 +1,34 @@
+Strategy 20: Equity-VIX Ratio
+
+Purpose:
+- Monitor risk-adjusted returns
+- Detect market complacency
+- Identify volatility dislocations
+
+Features:
+Base Features:
+- MXUS (MSCI US Index)
+- VIX (CBOE Volatility Index)
+- USGG10YR (US 10Y yield)
+
+Derived Features:
+- EQUITY_VIX_RATIO
+- RATIO_7D_CHANGE
+- RATIO_7D_STD
+- RISK_ADJUSTED_RETURN
+- COMPLACENCY_INDICATOR
+- VOLATILITY_PREMIUM
+- MARKET_STRESS_SIGNAL
+- RISK_APPETITE_SCORE
+
+Advantages:
+- Risk-return perspective
+- Market sentiment gauge
+- Complacency detection
+- Historical reliability
+
+Disadvantages:
+- Ratio instability in extremes
+- Volatility basis effects
+- US market dependency
+- Mean reversion complexity 

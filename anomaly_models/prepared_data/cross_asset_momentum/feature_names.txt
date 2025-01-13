@@ -1,0 +1,35 @@
+MXUS
+XAU BGNL
+DXY
+Cl1
+BDIY
+MXUS_mom_7d
+MXUS_mean_rev_7d
+MXUS_mom_14d
+MXUS_mean_rev_14d
+MXUS_mom_21d
+MXUS_mean_rev_21d
+XAU BGNL_mom_7d
+XAU BGNL_mean_rev_7d
+XAU BGNL_mom_14d
+XAU BGNL_mean_rev_14d
+XAU BGNL_mom_21d
+XAU BGNL_mean_rev_21d
+DXY_mom_7d
+DXY_mean_rev_7d
+DXY_mom_14d
+DXY_mean_rev_14d
+DXY_mom_21d
+DXY_mean_rev_21d
+Cl1_mom_7d
+Cl1_mean_rev_7d
+Cl1_mom_14d
+Cl1_mean_rev_14d
+Cl1_mom_21d
+Cl1_mean_rev_21d
+BDIY_mom_7d
+BDIY_mean_rev_7d
+BDIY_mom_14d
+BDIY_mean_rev_14d
+BDIY_mom_21d
+BDIY_mean_rev_21d

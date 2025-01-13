@@ -1,0 +1,31 @@
+Strategy 7: Volatility vs Equities Cross-Asset Correlation
+
+Purpose:
+- Monitor fear-greed relationship
+- Detect volatility breakdowns
+- Identify market sentiment shifts
+
+Features:
+Base Features:
+- MXUS (MSCI US Index)
+- VIX (CBOE Volatility Index)
+
+Derived Features:
+- MXUS_VIX_CORR (Direct correlation proxy)
+- MXUS_VIX_RATIO (Return-to-volatility ratio)
+- FEAR_GREED_INDEX
+- VOLATILITY_PREMIUM
+- SENTIMENT_SCORE
+- MARKET_STRESS_INDICATOR
+
+Advantages:
+- Classic relationship monitoring
+- Clear sentiment signals
+- Regime change detection
+- Market psychology insights
+
+Disadvantages:
+- Volatility clustering effects
+- Correlation breakdown risk
+- US market centric view
+- Lag in extreme conditions 
